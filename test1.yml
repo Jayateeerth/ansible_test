@@ -1,0 +1,11 @@
+---
+- name: To execute playbooks
+  hosts: target_node
+  tasks:
+    - name: Execute Python script
+      command: python3 /home/python/script.py
+      register: script_result
+
+    - name: Display script output
+      debug:
+        var: script_result.stdout_lines

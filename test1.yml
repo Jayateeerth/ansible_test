@@ -1,6 +1,7 @@
 ---
 - name: To execute playbooks
   hosts: target_node
+  gather_facts: false
   tasks:
     - name: Execute Python script
       command: python3 /home/python/script.py
